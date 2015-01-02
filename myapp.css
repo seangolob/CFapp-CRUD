@@ -1,0 +1,10 @@
+/* CSS declarations go here */
+.thead {
+  width: 80px;
+}
+
+.thead-email {
+  width: 230px;
+}
+
+.hidden {}

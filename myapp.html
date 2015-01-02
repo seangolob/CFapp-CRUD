@@ -1,0 +1,44 @@
+<head>
+  <title>CFAPP</title>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>Users</h1>
+    </header>
+    <table class="table-striped">
+    <thead>
+      <tr>
+        <td class="thead">First</td>
+        <td class="thead">Last</td>
+        <td class="thead-email">Email</td>
+        <td class="thead"></td>
+        <td class="thead"></td>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each users}}
+        {{> user}}
+      {{/each}}
+    </tbody>
+    </table>
+      <form class="new-user">
+        <input type="text" name="first" value="" placeholder="Insert first name" required id="first">
+        <input type="text" name="last" value="" placeholder="Insert last name" id="last">
+        <input type="email" name="email" value="" placeholder="Insert email" id="email">
+        <input type="hidden" name="id" id="id">
+        <button type="submit">Submit</button>
+      </form>
+  </div>
+</body>
+
+<template name="user">
+  <tr>
+    <td>{{first}}</td>
+    <td>{{last}}</td>
+    <td>{{email}}</td>
+    <td><button class="edit">Edit</button></td>
+    <td><button class="remove">Remove</button></td>
+  </tr>
+</template>
